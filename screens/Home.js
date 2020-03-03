@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, Button } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 export default function Home ({ route, navigation }) {
   const { phrase } = route.params
@@ -11,11 +12,11 @@ export default function Home ({ route, navigation }) {
     ),
   })
   return (
-    <View>
+    <SafeAreaView>
       <Text>Home {phrase}</Text>
       <Button title='Profile' onPress={() => {navigation.navigate('Profile')}} />
       <Button title='Go back' onPress={() => {navigation.goBack()}} />
       <Text>Count: {count}</Text>
-    </View>
+    </SafeAreaView>
   )
 }
