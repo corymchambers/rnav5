@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-import AppNavigator from './navigation/routesModal'
+import AppNavigator from './navigation/routesDrawer'
 
 const App: () => React$Node = () => {
   return (

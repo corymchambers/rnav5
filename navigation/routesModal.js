@@ -24,7 +24,7 @@ function AppNavigator() {
     </NavigationContainer>
   )
 }
-//left off here
+
 function MainStackScreen() {
   return (
     <MainStack.Navigator
