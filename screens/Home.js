@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Button } from 'react-native'
+import { StyleSheet, Text, Button, StatusBar } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 export default function Home ({ route, navigation }) {
@@ -12,7 +12,8 @@ export default function Home ({ route, navigation }) {
     ),
   })
   return (
-    <SafeAreaView>
+    <SafeAreaView style={[styles.container, { backgroundColor: '#6a51ae' }]}>
+      <StatusBar barStyle="dark-content" backgroundColor="white" />
       <Text>Home {phrase}</Text>
       <Button title='Profile' onPress={() => {navigation.navigate('Profile')}} />
       <Button title='Go back' onPress={() => {navigation.goBack()}} />
@@ -20,3 +21,7 @@ export default function Home ({ route, navigation }) {
     </SafeAreaView>
   )
 }
+
+const styles = StyleSheet.create({
+  container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
+});
